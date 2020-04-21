@@ -201,6 +201,7 @@ class User extends FrontendUser
     public function setTxFemanagerConfirmedbyuser($txFemanagerConfirmedbyuser)
     {
         $this->txFemanagerConfirmedbyuser = $txFemanagerConfirmedbyuser;
+        $this->setTxFemanagerUnconfirmedSince(0);
         return $this;
     }
 
