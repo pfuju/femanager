@@ -276,6 +276,7 @@ class NewController extends AbstractController
             $this->createAdminConfirmationRequest($user);
             $this->redirectByAction('new', 'requestRedirect');
         }
+        $this->redirect('createStatus');
     }
 
     /**
