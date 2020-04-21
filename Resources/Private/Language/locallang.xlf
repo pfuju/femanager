@@ -619,8 +619,8 @@
 			<trans-unit id="BackendConfirmationColumnAction">
 				<source>Actions</source>
 			</trans-unit>
-			<trans-unit id="BackendConfirmationColumnAction">
-				<source>Actions</source>
+			<trans-unit id="BackendtxFemanagerUnconfirmedSince">
+				<source>unconfirmed since</source>
 			</trans-unit>
 			<trans-unit id="BackendConfirmationColumnUid">
 				<source>UID</source>

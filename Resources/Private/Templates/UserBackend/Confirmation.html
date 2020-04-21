@@ -29,10 +29,13 @@ UserBackend / List
 									<f:translate key="BackendConfirmationColumnUid">UID</f:translate>
 								</td>
 								<td nowrap="nowrap">
+									<f:translate key="tx_femanager_domain_model_user.username" />
+								</td>
+								<td nowrap="nowrap">
 									<f:translate key="tx_femanager_domain_model_user.crdate" />
 								</td>
 								<td nowrap="nowrap">
-									<f:translate key="tx_femanager_domain_model_user.username" />
+									<f:translate key="BackendtxFemanagerUnconfirmedSince" />
 								</td>
 								<td nowrap="nowrap">
 									<f:translate key="tx_femanager_domain_model_user.country" />
@@ -46,7 +49,9 @@ UserBackend / List
 							</tr>
 
 							<f:for each="{usersPage}" as="user">
+
 								<tr class="db_list_normal firstcol femanager_list_line">
+
 									<td nowrap="nowrap">
 										<f:link.action action="confirmUser" arguments="{userIdentifier:user.uid}">
 											<core:icon identifier="actions-check" />
@@ -59,10 +64,13 @@ UserBackend / List
 										{user.uid}
 									</td>
 									<td nowrap="nowrap">
+										{user.username}
+									</td>
+									<td nowrap="nowrap">
 										<f:format.date format="d.m.Y H:i">{user.crdate}</f:format.date>
 									</td>
 									<td nowrap="nowrap">
-										{user.username}
+										<f:format.date format="d.m.Y H:i">{user.txFemanagerUnconfirmedSince}</f:format.date>
 									</td>
 									<td nowrap="nowrap">
 										{user.country}
