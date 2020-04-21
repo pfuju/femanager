@@ -21,4 +21,14 @@ call_user_func(function () {
             'Invitation' => 'new, create, edit, update, delete'
         ]
     );
+
+    // eID for Field Validation (FE)
+    $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['femanagerValidate'] = 'EXT:femanager/Classes/Eid/ValidateEid.php';
+
+    // eID for FeUser simulation (FE)
+    $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['femanagerLoginAs'] = 'EXT:femanager/Classes/Eid/LoginAsEid.php';
+
+    //CommandController for femanager tasks
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['extbase']['commandControllers'][] =
+        \In2code\Femanager\Command\TaskCommandController::class;
 });
